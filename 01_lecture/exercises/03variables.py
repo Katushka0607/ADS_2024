@@ -48,3 +48,4 @@ Convert the integer from before to a string and print its type
 # Write your solution here
 myInt = str(myInt)
 print(type(myInt))
+
