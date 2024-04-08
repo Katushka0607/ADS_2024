@@ -51,7 +51,6 @@ Assigning different values to multiple variables
 # print(b)
 # print(c)
 
-
 """
 Integers
 
@@ -85,7 +84,7 @@ Combining values while printing
 The following program will not work, because "The result is " and result are of two different types:
 """
 
-# result = 10 * 25
+#  result = 10 * 25
 # # the following line produces an error
 # print("The result is " + result)
 
@@ -115,10 +114,13 @@ The syntax can initially look a bit confusing, but in the end f-strings are ofte
 # result = 10 * 25
 # print(f"The result is {result}")
 #
-# name = "René"
-# age = 30
-# city = "Vienna"
-# print(f"Hi {name}, you are {age} years old. You live in {city}.")
+name = "René"
+age = 30
+city = "Vienna"
+print(f"Hi {name}, you are {age} years old. You live in {city}.")
+
+# # My own try: more complicated way of writing it.
+print("Hi " + name + ", you are", age, "years old. You live in " + city + ".")
 
 """
 Floating point numbers

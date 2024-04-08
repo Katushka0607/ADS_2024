@@ -18,6 +18,16 @@ Examples:
 """
 # Write your solution here
 
+# number1 = int(input("Enter the first number: "))
+# number2 = int(input("Enter the second number: "))
+#
+# if number1 > number2:
+#    print("The greater number is: " + str(number1))
+# elif number1 < number2:
+#    print("The greater number is: " + str(number2))
+# else:
+#    print("The numbers are equal.")
+
 """
 Python comparison operators can also be used on strings. 
 String a is smaller than string b if it comes alphabetically before b. Notice however that the comparison is only reliable if
@@ -44,6 +54,15 @@ You gave the same word twice.
 """
 # Write your solution here
 
+# word1 = input("Please use only lower case letters.\nType in the 1st word: ")
+# word2 = input("Type in the 2nd word: ")
+# if word1 > word2:
+#    print(word1 + " comes alphabetically last.")
+# elif word1 < word2:
+#    print(word2 + " comes alphabetically last.")
+# else:
+#    print("You entered the same word twice.")
+
 """
 Write a program which asks for the user's name. 
 If the name is Huey, Dewey or Louie, the program should recognise the user as one of Donald Duck's nephews.
@@ -60,6 +79,14 @@ Examples:
     You're not a nephew of any character I know of.
 """
 # Write your solution here
+
+# name = input("Please type in your name: ")
+# if name == "Huey" or name == "Dewey" or name == "Louie":
+#    print("I think you might be one of Donald Duck's nephews.")
+# if name == "Morty" or name == "Ferdie":
+#   print("I think you might be one of Mickey Mouse's nephews.")
+# else:
+#    print("You're not a nephew of any character I know of.")
 
 """
 FizzBuzz
@@ -82,6 +109,15 @@ Examples:
 """
 # Write your solution here
 
+# number = int(input("Please enter a whole number: "))
+# if number % 3 == 0 and number % 5 == 0:
+#    print("FizzBuzz")
+# elif number % 5 == 0:
+#    print("Buzz")
+# elif number % 3 == 0:
+#    print("Fizz")
+# else:
+#    print("The number is neither divisible by 3 nor by 5.")
 
 """
 LeapYear
@@ -102,3 +138,12 @@ Examples:
 """
 # Write your solution here
 
+year = int(input("Please enter a year: "))
+if year % 4 == 0 and year % 100 == 0 and year % 400 == 0:
+    print("That year is a leap year.")
+elif year % 4 == 0 and year % 100 == 0:
+    print("That year is NOT a leap year.")
+elif year % 4 == 0:
+    print("That year is a leap year.")
+else:
+    print("That year is NOT a leap year.")

@@ -17,14 +17,14 @@ budget = float(input("What's your current budget?\n"))
 print("Hello, " + name + "! Your budget is " + apply_printing_format_to_number(budget) + "€. Let's go shopping!")
 
 groceries_to_buy = [
-    ["Apple", 5, 0.45],
-    ["Banana", 8, 0.80],
-    ["Onion", 4, 0.70],
+    ["Apple", 2, 0.45],
+    ["Banana", 2, 0.80],
+    ["Onion", 0, 0.70],
     ["Milk", 1, 1.90],
-    ["Bread", 2, 3.50],
-    ["Fish", 2, 16.90],
+    ["Bread", 1, 3.50],
+    ["Fish", 1, 16.90],
     ["Cake", 1, 12.60],
-    ["Steaks", 4, 9.95],
+    ["Steaks", 0, 10],
 ]
 
 sum_total = 0

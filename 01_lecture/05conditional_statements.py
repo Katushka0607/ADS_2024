@@ -67,5 +67,3 @@ print(f"Can the person vote? {can_vote}")
 # Logical "or"
 parents_attending = True
 allowed_to_enter = age > 18 or parents_attending
-
-

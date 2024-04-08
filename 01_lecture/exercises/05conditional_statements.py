@@ -12,6 +12,11 @@ Example:
 """
 # Write your solution here
 
+# number = int(input("Enter a number: "))
+# remainder = number % 2
+# if remainder == 0:
+#    print("The number is even.")
+# else: print("The number is odd.")
 
 """
 Write a program that asks the user for their exam grade (as a percentage). 
@@ -28,6 +33,13 @@ Example:
 """
 # Write your solution here
 
+# percentage = int(input("Enter your exam grade in percentage (0-100): "))
+# if percentage < 60:
+#    print("Unfortunately, you failed the exam.")
+# elif percentage >= 90:
+#    print("You are excellent!")
+# elif percentage >= 60:
+#    print("You passed the exam!")
 
 """
 Write a program that simulates a simple lunch ordering system. 
@@ -49,3 +61,19 @@ Example:
     Your order: Salad with ranch dressing
 """
 # Write your solution here
+
+selection = input("Would you like a sandwich, salad or wrap? ")
+if selection == "sandwich":
+    order = input("What kind of sandwich would you like: chicken, beef or veggie? ")
+    print("Your order: " + order + " sandwich")
+elif selection == "salad":
+    order = input("What kind of dressing would you like: vinaigrette, ranch or caesar? ")
+    print("Your order: salad with " + order + " dressing")
+elif selection == "wrap":
+    order = input("Would you like it toasted: yes or no? ")
+    if order == "yes":
+        print("Your order: toasted wrap")
+    elif order == "no":
+        print("Your order: wrap, not toasted")
+else:
+    print("Sorry, you input is invalid.")
