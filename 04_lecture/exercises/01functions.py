@@ -1,6 +1,7 @@
 """
 Exercises "Functions"
 """
+from typing import Callable
 
 """
 ### Function Definition / Execution ###
@@ -9,7 +10,13 @@ Define a function called "bark()". When executed, "Woof" should get printed to t
 Execute the function after its definition and run the program!
 """
 
+
 # Write your solution here
+# def bark():
+#    print("Woof")
+
+
+# bark()
 
 """
 ### Function with 1 Argument, additional logic ###
@@ -30,6 +37,51 @@ Examples:
 """
 
 # Write your solution here
+"""
+def make_sound(animal):
+    animal = animal.lower()
+    if animal == "dog":
+        print("woof")
+    elif animal == "cat":
+        print("meow")
+    elif animal == "cow":
+        print("moo")
+    else:
+        print("???")
+
+
+i = 0
+for i in range(0,3):
+    animal_input = input("enter an animal: ")
+    make_sound(animal_input)
+    i += 1
+"""
+
+"""
+def make_sound(animal: str) -> str:
+    animal = animal.lower()
+    sound = "???"
+    if animal == "dog":
+        sound = "woof"
+    elif animal == "cat":
+        sound = "meow"
+    elif animal == "cow":
+        sound = "moo"
+    return sound
+
+
+print("Hi! To exit, enter an ""x"" instead of an animal.")
+
+while True:
+    animal_input = input("enter an animal: ")
+    if animal_input == "x":
+        print("Bye!")
+        break
+    else:
+        result = make_sound(animal_input)
+        print(result)
+        continue
+"""
 
 """
 ### Function with 2 Arguments ###
@@ -53,6 +105,19 @@ Ask the user repeatedly using a loop.
 # Write your solution here
 
 """
+def print_many_times(text: str, times: int):
+    for i in range(times):
+        print(text)
+
+
+i = 1
+while i <= 3:
+    times_input = int(input("How many times should the text be printed? --> "))
+    print_many_times("Gimme Five!", times_input)
+    i += 1
+"""
+
+"""
 ### Return Values ###
 
 Define a function named greatest_number, which takes three arguments. The function returns the greatest in value of the 
@@ -67,10 +132,31 @@ Additional Task:
 Add a type hint to the return value of the function!
 """
 
-def print_greatest(number):
-    print(f"The greatest number is {number}!")
-
 # Write your solution here
+"""
+def greatest_number(a: int, b: int, c: int) -> int:
+    if a > b and a > c:
+        return a
+    elif b > a and b > c:
+        return b
+    elif c > a and c > b:
+        return c
+
+
+nr1 = int(input("Enter number 1: << "))
+nr2 = int(input("Enter number 2: << "))
+nr3 = int(input("Enter number 3: << "))
+return_value = greatest_number(nr1, nr2, nr3)
+
+
+# print(type(return_value))
+
+def print_greatest(number: int) -> int:
+    print(f'The greatest number is {number}.')
+
+
+print_greatest(return_value)
+"""
 
 """
 ### Type Hints ###
@@ -94,6 +180,33 @@ Example Outputs:
 """
 
 # Write your solution here
+"""
+def super_print(a: str, b: bool):
+    if b == True:
+        print(a.upper())
+    else:
+        print(a)
+
+
+super_print("text1 should be printed in lower case", False)
+super_print(b=True, a="text2 should be printed in upper case")
+"""
+
+"""
+def super_print(a: str, b: bool):
+    if b == "False":
+        print(a)
+    elif b == "True":
+        print(a.upper())
+    else:
+        print("???")
+
+
+a_text = input("Please enter a short text to be printed: ")
+b_choice = input("Should the text be printed in upper case? (True/False) ")
+
+super_print(a_text, b_choice)
+"""
 
 """
 ### Default Values ###
@@ -111,4 +224,14 @@ Example:
     Hello Unknown!
 """
 
+
 # Write your solution here
+def greet(name):
+    print("Hello " + name + "!")
+
+
+user_name = input("Please enter your name: >> ")
+if user_name == "":
+    user_name = "Unknown"
+
+greet(user_name)
